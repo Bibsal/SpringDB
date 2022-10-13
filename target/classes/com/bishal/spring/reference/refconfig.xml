@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Now below we will make bean of B class and the using it's reference we'll assign the value of B to A class ka variable me -->
+	<bean class="com.bishal.spring.reference.B" name="bref">
+		<property name="y" value="99"/>
+	</bean>
+	
+	<bean class="com.bishal.spring.reference.A" name="aref">
+		<property name="x" value="89"/>
+		<!-- Ab yahi niche wali line me mai dikha rha hu ki kse reference ki madad sae hum setter injection kar sakte hai -->
+		<property name="obj">
+			<ref bean="bref"/>   <!-- So yaha reference me hamne bean ko assign kardiya first wale bean 'B' sae jiska value hum reference ki madad sae A class ki x me inject karnge, matlb ab wo upar B me 99 dala tha tho x mae bhi 99 aa jayega, via reference type injection -->
+		</property>
+	</bean>
+	
+</beans>
