@@ -38,9 +38,10 @@ and hame khud objects nhi bnane pdnge
 # Application Context :-
 * Application context represents our IoC container 
 * And iski implementation tin tarike sae mostly di gai 
-* i.e * ClasspathXMLApplicationContext (basically ye scan karta hai hamari xml configuration ko from the java class path)
-	  * AnnotationConfigApplicationContext (basically ye un beans(class) ko scan krta hai jisme hamne use kiya ho Annotations)
-	  * FileSystemXMLApplicationContext (ye hum tab use krte hai jab hame file configuration ki file ko file system sae scan krani ho tho use karna)
+ i.e the three as below :-
+* ClasspathXMLApplicationContext (basically ye scan karta hai hamari xml configuration ko from the java class path)
+* AnnotationConfigApplicationContext (basically ye un beans(class) ko scan krta hai jisme hamne use kiya ho Annotations)
+* FileSystemXMLApplicationContext (ye hum tab use krte hai jab hame file configuration ki file ko file system sae scan krani ho tho use karna)
 
 ---------------------------------------------------------
 
